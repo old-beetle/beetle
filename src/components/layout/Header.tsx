@@ -6,7 +6,7 @@ import {
   Menu,
   Search,
   X,
-  Cigarette,
+  Bug,
   List,
   LogOut,
   Maximize,
@@ -112,7 +112,7 @@ const Header: React.FC = () => {
           to="/"
           className="flex items-center space-x-2 transition-transform hover:scale-105"
         >
-          <Cigarette className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+          <Bug className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
           <span className="font-oswald font-bold text-lg sm:text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
             beetle
           </span>
@@ -224,7 +224,7 @@ const Header: React.FC = () => {
                 <div className="flex items-center justify-between mb-6 sm:mb-8">
                   <SheetClose asChild>
                     <Link to="/" className="flex items-center space-x-1">
-                      <Cigarette className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+                      <Bug className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                       <span className="font-oswald font-bold text-lg sm:text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                         beetle
                       </span>
