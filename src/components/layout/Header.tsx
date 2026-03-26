@@ -6,7 +6,7 @@ import {
   Menu,
   Search,
   X,
-  Bug,
+  Cigarette,
   List,
   LogOut,
   Maximize,
@@ -45,8 +45,6 @@ import { cn } from "@/lib/utils";
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [newBannerMessage, setNewBannerMessage] = useState("");
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const isGenresPage = location.pathname.startsWith("/genres");
@@ -58,19 +56,8 @@ const Header: React.FC = () => {
     toggleLayout,
     isBannerVisible,
     bannerMessage,
-    setBannerMessage,
     setBannerVisible,
   } = useLayout();
-
-  useEffect(() => {
-    setNewBannerMessage(bannerMessage);
-  }, [bannerMessage]);
-
-  const handleUpdateBanner = () => {
-    setBannerMessage(newBannerMessage);
-    setBannerVisible(true);
-    setIsDialogOpen(false);
-  };
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -125,7 +112,7 @@ const Header: React.FC = () => {
           to="/"
           className="flex items-center space-x-2 transition-transform hover:scale-105"
         >
-          <Bug className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+          <Cigarette className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
           <span className="font-oswald font-bold text-lg sm:text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
             beetle
           </span>
@@ -196,50 +183,6 @@ const Header: React.FC = () => {
             </Tooltip>
           </TooltipProvider>
 
-          {session && (
-            <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-              <DialogTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="hidden md:flex hover:bg-white/5"
-                  aria-label="Change Banner Message"
-                >
-                  <Megaphone className="h-5 w-5" />
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle>Update Banner Message</DialogTitle>
-                  <DialogDescription>
-                    This message will be displayed at the top of all pages.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="flex items-center space-x-2 py-4">
-                  <Input
-                    id="banner-message"
-                    value={newBannerMessage}
-                    onChange={(e) => setNewBannerMessage(e.target.value)}
-                    placeholder="Enter new banner message..."
-                    className="flex-1"
-                  />
-                </div>
-                <DialogFooter className="sm:justify-end">
-                  <Button
-                    type="button"
-                    variant="secondary"
-                    onClick={() => setIsDialogOpen(false)}
-                  >
-                    Cancel
-                  </Button>
-                  <Button type="button" onClick={handleUpdateBanner}>
-                    Save Changes
-                  </Button>
-                </DialogFooter>
-              </DialogContent>
-            </Dialog>
-          )}
-
           {!session ? (
             <>
               <Link to="/login">
@@ -281,7 +224,7 @@ const Header: React.FC = () => {
                 <div className="flex items-center justify-between mb-6 sm:mb-8">
                   <SheetClose asChild>
                     <Link to="/" className="flex items-center space-x-1">
-                      <Bug className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+                      <Cigarette className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                       <span className="font-oswald font-bold text-lg sm:text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                         beetle
                       </span>
