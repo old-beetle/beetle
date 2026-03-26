@@ -30,10 +30,7 @@ const ContactPage: React.FC = () => {
           content="Contact the beetle team for questions, suggestions, or feedback. Get in touch with us here."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://beetlered.ddnsfree.com/contact"
-        />
+        <meta property="og:url" content="https://beetle.kozow.com/contact" />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact - beetle Streaming" />

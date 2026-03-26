@@ -21,10 +21,7 @@ const PrivacyPage: React.FC = () => {
           content="Read the privacy policy for beetle. Learn how your data is handled and protected."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://beetlered.ddnsfree.com/privacy"
-        />
+        <meta property="og:url" content="https://beetle.kozow.com/privacy" />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta

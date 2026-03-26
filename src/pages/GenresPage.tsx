@@ -188,10 +188,7 @@ const GenresPage: React.FC = () => {
           content="Browse movies and TV shows by genre. Find your favorite genres and discover new content on beetle."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://beetlered.ddnsfree.com/genres"
-        />
+        <meta property="og:url" content="https://beetle.kozow.com/genres" />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Genres - beetle Streaming" />

@@ -22,10 +22,7 @@ const AboutPage: React.FC = () => {
           content="Learn more about beetle, our mission, data sources, and commitment to providing a modern streaming experience."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://beetlered.ddnsfree.com/about"
-        />
+        <meta property="og:url" content="https://beetle.kozow.com/about" />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -48,11 +45,11 @@ const AboutPage: React.FC = () => {
           <h1 className="text-3xl font-bold mb-8">About Us</h1>
 
           <div className="prose prose-invert max-w-none space-y-8">
-            <section>
+            {/* <section>
               <div>
                 <h2 className="text-2xl font-semibold mb-4">Kenny made this</h2>
               </div>
-            </section>
+            </section> */}
 
             <section>
               <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
@@ -67,6 +64,10 @@ const AboutPage: React.FC = () => {
               <p>
                 I have nothing to do with the ads, they're because of the api
                 providers. Use adblocker or something.
+                <p className="text-muted-foreground inline">
+                  Try ublock origin lite, and also consider using Cloudfare
+                  1.1.1.1 on an OS level.
+                </p>
               </p>
             </section>
 

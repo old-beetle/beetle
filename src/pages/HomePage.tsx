@@ -346,7 +346,7 @@ const HomePage: React.FC = () => {
             content="Stream trending movies and TV shows from multiple sources. Discover, watch, and manage your watchlist all in one place."
           />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://beetlered.ddnsfree.com/" />
+          <meta property="og:url" content="https://beetle.kozow.com/" />
           <meta property="og:image" content="/favicon.svg" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta
@@ -393,7 +393,7 @@ const HomePage: React.FC = () => {
           content="Stream trending movies and TV shows from multiple sources. Discover, watch, and manage your watchlist all in one place."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://beetlered.ddnsfree.com/" />
+        <meta property="og:url" content="https://beetle.kozow.com/" />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta

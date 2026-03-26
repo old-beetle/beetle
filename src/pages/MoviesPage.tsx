@@ -98,10 +98,7 @@ const MoviesPage: React.FC = () => {
           content="Browse popular, trending, and top-rated movies. Discover new films and manage your watchlist on beetle."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://beetlered.ddnsfree.com/movies"
-        />
+        <meta property="og:url" content="https://beetle.kozow.com/movies" />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Movies - beetle Streaming" />

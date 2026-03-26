@@ -26,7 +26,7 @@ const TermsPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://beetlered.ddnsfree.com/terms"
+          content="https://beetle.kozow.com/terms"
         />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />

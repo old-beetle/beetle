@@ -98,10 +98,7 @@ const WatchlistPage: React.FC = () => {
           content="View and manage your personal watchlist. Keep track of movies and TV shows you want to watch on beetle."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://beetlered.ddnsfree.com/watchlist"
-        />
+        <meta property="og:url" content="https://beetle.kozow.com/watchlist" />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="My Watchlist - beetle Streaming" />

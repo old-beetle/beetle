@@ -83,10 +83,7 @@ const SearchPage: React.FC = () => {
           content="Search for movies, TV shows, and people. Find your favorite content quickly on beetle."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://beetlered.ddnsfree.com/search"
-        />
+        <meta property="og:url" content="https://beetle.kozow.com/search" />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Search - beetle Streaming" />
