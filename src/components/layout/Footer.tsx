@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Cigarette } from "lucide-react";
-import { FaDiscord, FaInstagram, FaEnvelope} from "react-icons/fa6";
+import { Bug } from "lucide-react";
+
+import { FaDiscord, FaInstagram, FaEnvelope } from "react-icons/fa6";
 import { Separator } from "@/components/ui/separator";
 
 const Footer: React.FC = () => {
@@ -14,9 +15,9 @@ const Footer: React.FC = () => {
               to="/"
               className="flex items-center space-x-2 transition-transform hover:scale-105"
             >
-              <Cigarette className="h-6 w-6 text-primary" />
+              <Bug className="h-6 w-6 text-primary" />
               <span className="font-bold text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                Alien
+                beetle
               </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -146,10 +147,10 @@ const Footer: React.FC = () => {
             >
               TMDb
             </a>
-            . Alien does not store any media files on its servers.
+            . beetle does not store any media files on its servers.
           </p>
           <p className="text-sm text-muted-foreground">
-            {new Date().getFullYear()} Alien. All rights not reserved lol.
+            {new Date().getFullYear()} beetle. All rights not reserved lol.
           </p>
         </div>
       </div>

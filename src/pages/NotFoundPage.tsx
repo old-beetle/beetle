@@ -2,15 +2,18 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { AlertCircle } from "lucide-react";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 const NotFoundPage: React.FC = () => {
   const navigate = useNavigate();
   return (
     <>
       <Helmet>
-        <title>404 Not Found - Alien Streaming</title>
-        <meta name="description" content="The page you are looking for does not exist." />
+        <title>404 Not Found - beetle Streaming</title>
+        <meta
+          name="description"
+          content="The page you are looking for does not exist."
+        />
       </Helmet>
       <div className="min-h-screen flex flex-col items-center justify-center p-4">
         <div className="max-w-md w-full space-y-4 text-center">
@@ -30,4 +33,4 @@ const NotFoundPage: React.FC = () => {
   );
 };
 
-export default NotFoundPage; 
+export default NotFoundPage;

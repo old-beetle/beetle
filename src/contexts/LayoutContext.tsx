@@ -21,7 +21,7 @@ export const LayoutProvider: React.FC<{ children: React.ReactNode }> = ({
     return (saved as LayoutMode) || "contained";
   });
 
-  const DEFAULT_BANNER_MESSAGE = "Alienred stands with Palestine.";
+  const DEFAULT_BANNER_MESSAGE = "Beetle stands with Palestine.";
 
   const [bannerMessage, setBannerMessage] = useState<string>(() => {
     const saved = localStorage.getItem("bannerMessage");

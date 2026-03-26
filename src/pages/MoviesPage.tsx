@@ -5,7 +5,7 @@ import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import MediaCard from "@/components/MediaCard";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 const MoviesPage: React.FC = () => {
   const [popularMovies, setPopularMovies] = useState<Movie[]>([]);
@@ -36,15 +36,19 @@ const MoviesPage: React.FC = () => {
 
         if (activeTab === "trending") {
           setTrendingMovies(
-            page === 1 ? moviesWithType : [...trendingMovies, ...moviesWithType]
+            page === 1
+              ? moviesWithType
+              : [...trendingMovies, ...moviesWithType],
           );
         } else if (activeTab === "top-rated") {
           setTopRatedMovies(
-            page === 1 ? moviesWithType : [...topRatedMovies, ...moviesWithType]
+            page === 1
+              ? moviesWithType
+              : [...topRatedMovies, ...moviesWithType],
           );
         } else {
           setPopularMovies(
-            page === 1 ? moviesWithType : [...popularMovies, ...moviesWithType]
+            page === 1 ? moviesWithType : [...popularMovies, ...moviesWithType],
           );
         }
 
@@ -83,21 +87,35 @@ const MoviesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Movies - Alien Streaming</title>
-        <meta name="description" content="Browse popular, trending, and top-rated movies. Discover new films and manage your watchlist on Alien." />
-        <meta property="og:title" content="Movies - Alien Streaming" />
-        <meta property="og:description" content="Browse popular, trending, and top-rated movies. Discover new films and manage your watchlist on Alien." />
+        <title>Movies - beetle Streaming</title>
+        <meta
+          name="description"
+          content="Browse popular, trending, and top-rated movies. Discover new films and manage your watchlist on beetle."
+        />
+        <meta property="og:title" content="Movies - beetle Streaming" />
+        <meta
+          property="og:description"
+          content="Browse popular, trending, and top-rated movies. Discover new films and manage your watchlist on beetle."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alienred.ddnsfree.com/movies" />
+        <meta
+          property="og:url"
+          content="https://beetlered.ddnsfree.com/movies"
+        />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Movies - Alien Streaming" />
-        <meta name="twitter:description" content="Browse popular, trending, and top-rated movies. Discover new films and manage your watchlist on Alien." />
+        <meta name="twitter:title" content="Movies - beetle Streaming" />
+        <meta
+          name="twitter:description"
+          content="Browse popular, trending, and top-rated movies. Discover new films and manage your watchlist on beetle."
+        />
         <meta name="twitter:image" content="/favicon.svg" />
       </Helmet>
       <div className="min-h-screen">
         <div className="container pt-24 pb-12">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Movies</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">
+            Movies
+          </h1>
 
           <Tabs
             defaultValue="popular"

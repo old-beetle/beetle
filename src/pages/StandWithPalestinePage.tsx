@@ -73,7 +73,7 @@ const StandWithPalestinePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Why We Stand With Palestine - Alien</title>
+        <title>Why We Stand With Palestine - beetle</title>
         <meta
           name="description"
           content="Understanding the legal and humanitarian case for the Palestinian cause through primary sources and international law."

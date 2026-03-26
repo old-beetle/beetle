@@ -332,26 +332,26 @@ const HomePage: React.FC = () => {
     return (
       <>
         <Helmet>
-          <title>Alien - Watch Movies & TV Shows Online</title>
+          <title>beetle - Watch Movies & TV Shows Online</title>
           <meta
             name="description"
             content="Stream trending movies and TV shows from multiple sources. Discover, watch, and manage your watchlist all in one place."
           />
           <meta
             property="og:title"
-            content="Alien - Watch Movies & TV Shows Online"
+            content="beetle - Watch Movies & TV Shows Online"
           />
           <meta
             property="og:description"
             content="Stream trending movies and TV shows from multiple sources. Discover, watch, and manage your watchlist all in one place."
           />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://alienred.ddnsfree.com/" />
+          <meta property="og:url" content="https://beetlered.ddnsfree.com/" />
           <meta property="og:image" content="/favicon.svg" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta
             name="twitter:title"
-            content="Alien - Watch Movies & TV Shows Online"
+            content="beetle - Watch Movies & TV Shows Online"
           />
           <meta
             name="twitter:description"
@@ -379,26 +379,26 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Alien - Watch Movies & TV Shows Online</title>
+        <title>beetle - Watch Movies & TV Shows Online</title>
         <meta
           name="description"
           content="Stream trending movies and TV shows from multiple sources. Discover, watch, and manage your watchlist all in one place."
         />
         <meta
           property="og:title"
-          content="Alien - Watch Movies & TV Shows Online"
+          content="beetle - Watch Movies & TV Shows Online"
         />
         <meta
           property="og:description"
           content="Stream trending movies and TV shows from multiple sources. Discover, watch, and manage your watchlist all in one place."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alienred.ddnsfree.com/" />
+        <meta property="og:url" content="https://beetlered.ddnsfree.com/" />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Alien - Watch Movies & TV Shows Online"
+          content="beetle - Watch Movies & TV Shows Online"
         />
         <meta
           name="twitter:description"

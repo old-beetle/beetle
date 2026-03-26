@@ -31,7 +31,7 @@ import {
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 const WatchlistPage: React.FC = () => {
   const {
@@ -87,16 +87,28 @@ const WatchlistPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>My Watchlist - Alien Streaming</title>
-        <meta name="description" content="View and manage your personal watchlist. Keep track of movies and TV shows you want to watch on Alien." />
-        <meta property="og:title" content="My Watchlist - Alien Streaming" />
-        <meta property="og:description" content="View and manage your personal watchlist. Keep track of movies and TV shows you want to watch on Alien." />
+        <title>My Watchlist - beetle Streaming</title>
+        <meta
+          name="description"
+          content="View and manage your personal watchlist. Keep track of movies and TV shows you want to watch on beetle."
+        />
+        <meta property="og:title" content="My Watchlist - beetle Streaming" />
+        <meta
+          property="og:description"
+          content="View and manage your personal watchlist. Keep track of movies and TV shows you want to watch on beetle."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alienred.ddnsfree.com/watchlist" />
+        <meta
+          property="og:url"
+          content="https://beetlered.ddnsfree.com/watchlist"
+        />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="My Watchlist - Alien Streaming" />
-        <meta name="twitter:description" content="View and manage your personal watchlist. Keep track of movies and TV shows you want to watch on Alien." />
+        <meta name="twitter:title" content="My Watchlist - beetle Streaming" />
+        <meta
+          name="twitter:description"
+          content="View and manage your personal watchlist. Keep track of movies and TV shows you want to watch on beetle."
+        />
         <meta name="twitter:image" content="/favicon.svg" />
       </Helmet>
       <div className="container pt-24 pb-12">
@@ -105,7 +117,9 @@ const WatchlistPage: React.FC = () => {
         <Tabs defaultValue="watchlist">
           <TabsList className="mb-6">
             <TabsTrigger value="watchlist">Watchlist</TabsTrigger>
-            <TabsTrigger value="continue-watching">Continue Watching</TabsTrigger>
+            <TabsTrigger value="continue-watching">
+              Continue Watching
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="watchlist" className="mt-0">
@@ -190,7 +204,7 @@ const WatchlistPage: React.FC = () => {
                           "h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity",
                           item.watched
                             ? "text-green-500"
-                            : "text-muted-foreground"
+                            : "text-muted-foreground",
                         )}
                         onClick={(e) => {
                           e.preventDefault();
@@ -207,7 +221,7 @@ const WatchlistPage: React.FC = () => {
                           "h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity",
                           item.watch_later
                             ? "text-yellow-500"
-                            : "text-muted-foreground"
+                            : "text-muted-foreground",
                         )}
                         onClick={(e) => {
                           e.preventDefault();
@@ -239,8 +253,8 @@ const WatchlistPage: React.FC = () => {
                   Your watchlist is empty
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  Add movies and TV shows to your watchlist to keep track of what
-                  you want to watch.
+                  Add movies and TV shows to your watchlist to keep track of
+                  what you want to watch.
                 </p>
                 <Button onClick={() => navigate("/")}>Browse Content</Button>
               </div>

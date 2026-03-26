@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPage: React.FC = () => {
   const navigate = useNavigate();
@@ -10,16 +10,31 @@ const PrivacyPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - Alien Red</title>
-        <meta name="description" content="Read the privacy policy for Alien. Learn how your data is handled and protected." />
-        <meta property="og:title" content="Privacy Policy - Alien Streaming" />
-        <meta property="og:description" content="Read the privacy policy for Alien. Learn how your data is handled and protected." />
+        <title>Privacy Policy - beetle</title>
+        <meta
+          name="description"
+          content="Read the privacy policy for beetle. Learn how your data is handled and protected."
+        />
+        <meta property="og:title" content="Privacy Policy - beetle Streaming" />
+        <meta
+          property="og:description"
+          content="Read the privacy policy for beetle. Learn how your data is handled and protected."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alienred.ddnsfree.com/privacy" />
+        <meta
+          property="og:url"
+          content="https://beetlered.ddnsfree.com/privacy"
+        />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Privacy Policy - Alien Streaming" />
-        <meta name="twitter:description" content="Read the privacy policy for Alien. Learn how your data is handled and protected." />
+        <meta
+          name="twitter:title"
+          content="Privacy Policy - beetle Streaming"
+        />
+        <meta
+          name="twitter:description"
+          content="Read the privacy policy for beetle. Learn how your data is handled and protected."
+        />
         <meta name="twitter:image" content="/favicon.svg" />
       </Helmet>
       <div className="container px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
@@ -31,15 +46,13 @@ const PrivacyPage: React.FC = () => {
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
 
-          <div
-            className="prose prose-invert max-w-none space-y-8 prose-li:list-disc prose-li:ml-4"
-          >
+          <div className="prose prose-invert max-w-none space-y-8 prose-li:list-disc prose-li:ml-4">
             <section>
               <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
               <p>
-                Welcome to Alien Red. We are committed to protecting your
-                privacy. This Privacy Policy explains how we collect, use, and
-                safeguard your information when you use our website.
+                Welcome to beetle. We are committed to protecting your privacy.
+                This Privacy Policy explains how we collect, use, and safeguard
+                your information when you use our website.
               </p>
             </section>
 
@@ -48,25 +61,26 @@ const PrivacyPage: React.FC = () => {
                 Information We Collect
               </h2>
               <p>
-                We collect information that you provide to us directly, <em>such as when you create an account
-                </em>. This information may include:
+                We collect information that you provide to us directly,{" "}
+                <em>such as when you create an account</em>. This information
+                may include:
               </p>
               <ul>
                 <li>Your name</li>
                 <li>Your email address</li>
               </ul>
               <p>
-                We use{' '}
+                We use{" "}
                 <a
                   href="https://supabase.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Supabase
-                </a>{' '}
+                </a>{" "}
                 for authentication and database services. Supabase may collect
                 information about you on our behalf. You can learn more about
-                Supabase's privacy practices by reading their{' '}
+                Supabase's privacy practices by reading their{" "}
                 <a
                   href="https://supabase.com/privacy"
                   target="_blank"
@@ -97,10 +111,10 @@ const PrivacyPage: React.FC = () => {
                 Data Storage and Security
               </h2>
               <p>
-                Your data is stored and managed by Supabase. Supabase implements a
-                variety of security measures to maintain the safety of your
-                personal information. You can learn more about Supabase's security
-                practices{' '}
+                Your data is stored and managed by Supabase. Supabase implements
+                a variety of security measures to maintain the safety of your
+                personal information. You can learn more about Supabase's
+                security practices{" "}
                 <a
                   href="https://supabase.com/docs/guides/platform/security"
                   target="_blank"
@@ -135,15 +149,11 @@ const PrivacyPage: React.FC = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
               <p>
-                If you have any questions about this Privacy Policy, please
-                {' '}
-                <a
-                  href="/contact"
-                  target=""
-                  rel="noopener noreferrer"
-                >
+                If you have any questions about this Privacy Policy, please{" "}
+                <a href="/contact" target="" rel="noopener noreferrer">
                   contact us
-                </a>.
+                </a>
+                .
               </p>
             </section>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Cat } from "lucide-react";
-import { FaDiscord, FaInstagram, FaEnvelope} from "react-icons/fa6";
+import { FaDiscord, FaInstagram, FaEnvelope } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
@@ -11,24 +11,30 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>About Alien - Streaming Platform</title>
+        <title>About beetle - Streaming Platform</title>
         <meta
           name="description"
-          content="Learn more about Alien, our mission, data sources, and commitment to providing a modern streaming experience."
+          content="Learn more about beetle, our mission, data sources, and commitment to providing a modern streaming experience."
         />
-        <meta property="og:title" content="About Alien - Streaming Platform" />
+        <meta property="og:title" content="About beetle - Streaming Platform" />
         <meta
           property="og:description"
-          content="Learn more about Alien, our mission, data sources, and commitment to providing a modern streaming experience."
+          content="Learn more about beetle, our mission, data sources, and commitment to providing a modern streaming experience."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alienred.ddnsfree.com/about" />
+        <meta
+          property="og:url"
+          content="https://beetlered.ddnsfree.com/about"
+        />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Alien - Streaming Platform" />
+        <meta
+          name="twitter:title"
+          content="About beetle - Streaming Platform"
+        />
         <meta
           name="twitter:description"
-          content="Learn more about Alien, our mission, data sources, and commitment to providing a modern streaming experience."
+          content="Learn more about beetle, our mission, data sources, and commitment to providing a modern streaming experience."
         />
         <meta name="twitter:image" content="/favicon.svg" />
       </Helmet>
@@ -52,7 +58,7 @@ const AboutPage: React.FC = () => {
               <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
               <p>
                 There is no mission, i just made this website for fun. I like
-                making stuff. Also yes the logo of the website is a cigarette.
+                making stuff. Also yes the logo of the website is a Bug.
               </p>
             </section>
 
@@ -65,8 +71,8 @@ const AboutPage: React.FC = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4">What Alien Does</h2>
-              <p>Alien is a modern streaming platform that offers:</p>
+              <h2 className="text-2xl font-semibold mb-4">What beetle Does</h2>
+              <p>beetle is a modern streaming platform that offers:</p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>Extensive collection of movies and TV shows</li>
                 <li>Personalized recommendations</li>
@@ -117,36 +123,36 @@ const AboutPage: React.FC = () => {
                   <sup> *jk i'm pbviously not Ryan Gosling</sup>
                 </li>
               </ul> */}
-                            <div className="space-y-4">
-                              <div className="flex items-center space-x-3">
-                                <FaEnvelope className="h-5 w-5 text-primary" />
-                                <a
-                                  href="mailto:redjohn9818@proton.me"
-                                  className="text-muted-foreground hover:text-primary transition-colors"
-                                >
-                                  redjohn9818@proton.me
-                                </a>
-                              </div>
-                              <div className="flex items-center space-x-3">
-                                <FaDiscord className="h-5 w-5 text-primary" />
-                                <a
-                                  href="https://discord.com/users/clueless1006"
-                                  className="text-muted-foreground hover:text-primary transition-colors"
-                                >
-                                  clueless1006
-                                </a>
-                              </div>
-                              <div className="flex items-center space-x-3">
-                                <FaInstagram className="h-5 w-5 text-primary" />
-                                <a
-                                  href="https://www.instagram.com/ryangoslingoffical__/"
-                                  className="text-muted-foreground hover:text-primary transition-colors"
-                                >
-                                  @ryangoslingoffical__
-                                </a>
-                                <sup> *jk i'm pbviously not Ryan Gosling</sup>
-                              </div>
-                            </div>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <FaEnvelope className="h-5 w-5 text-primary" />
+                  <a
+                    href="mailto:redjohn9818@proton.me"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    redjohn9818@proton.me
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <FaDiscord className="h-5 w-5 text-primary" />
+                  <a
+                    href="https://discord.com/users/clueless1006"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    clueless1006
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <FaInstagram className="h-5 w-5 text-primary" />
+                  <a
+                    href="https://www.instagram.com/ryangoslingoffical__/"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    @ryangoslingoffical__
+                  </a>
+                  <sup> *jk i'm pbviously not Ryan Gosling</sup>
+                </div>
+              </div>
             </section>
 
             {/* <section>

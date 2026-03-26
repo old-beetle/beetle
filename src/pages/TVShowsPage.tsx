@@ -5,7 +5,7 @@ import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import MediaCard from "@/components/MediaCard";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 const TVShowsPage: React.FC = () => {
   const [popularShows, setPopularShows] = useState<TVShow[]>([]);
@@ -36,15 +36,15 @@ const TVShowsPage: React.FC = () => {
 
         if (activeTab === "trending") {
           setTrendingShows(
-            page === 1 ? showsWithType : [...trendingShows, ...showsWithType]
+            page === 1 ? showsWithType : [...trendingShows, ...showsWithType],
           );
         } else if (activeTab === "top-rated") {
           setTopRatedShows(
-            page === 1 ? showsWithType : [...topRatedShows, ...showsWithType]
+            page === 1 ? showsWithType : [...topRatedShows, ...showsWithType],
           );
         } else {
           setPopularShows(
-            page === 1 ? showsWithType : [...popularShows, ...showsWithType]
+            page === 1 ? showsWithType : [...popularShows, ...showsWithType],
           );
         }
 
@@ -83,16 +83,25 @@ const TVShowsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>TV Shows - Alien Streaming</title>
-        <meta name="description" content="Browse popular, trending, and top-rated TV shows. Discover new series and manage your watchlist on Alien." />
-        <meta property="og:title" content="TV Shows - Alien Streaming" />
-        <meta property="og:description" content="Browse popular, trending, and top-rated TV shows. Discover new series and manage your watchlist on Alien." />
+        <title>TV Shows - beetle Streaming</title>
+        <meta
+          name="description"
+          content="Browse popular, trending, and top-rated TV shows. Discover new series and manage your watchlist on beetle."
+        />
+        <meta property="og:title" content="TV Shows - beetle Streaming" />
+        <meta
+          property="og:description"
+          content="Browse popular, trending, and top-rated TV shows. Discover new series and manage your watchlist on beetle."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alienred.ddnsfree.com/tv" />
+        <meta property="og:url" content="https://beetlered.ddnsfree.com/tv" />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="TV Shows - Alien Streaming" />
-        <meta name="twitter:description" content="Browse popular, trending, and top-rated TV shows. Discover new series and manage your watchlist on Alien." />
+        <meta name="twitter:title" content="TV Shows - beetle Streaming" />
+        <meta
+          name="twitter:description"
+          content="Browse popular, trending, and top-rated TV shows. Discover new series and manage your watchlist on beetle."
+        />
         <meta name="twitter:image" content="/favicon.svg" />
       </Helmet>
       <div className="min-h-screen">

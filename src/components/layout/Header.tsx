@@ -1,6 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Film, Home, Menu, Search, X, Cigarette, List, LogOut, Maximize, Minimize, Megaphone } from "lucide-react";
+import {
+  Film,
+  Home,
+  Menu,
+  Search,
+  X,
+  Bug,
+  List,
+  LogOut,
+  Maximize,
+  Minimize,
+  Megaphone,
+} from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useLayout } from "@/contexts/LayoutContext";
 import { supabase } from "@/lib/supabase";
@@ -41,7 +53,14 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
 
   const { session } = useAuth();
-  const { layoutMode, toggleLayout, isBannerVisible, bannerMessage, setBannerMessage, setBannerVisible } = useLayout();
+  const {
+    layoutMode,
+    toggleLayout,
+    isBannerVisible,
+    bannerMessage,
+    setBannerMessage,
+    setBannerVisible,
+  } = useLayout();
 
   useEffect(() => {
     setNewBannerMessage(bannerMessage);
@@ -55,7 +74,7 @@ const Header: React.FC = () => {
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    navigate('/');
+    navigate("/");
   };
 
   const handleScroll = () => {
@@ -98,7 +117,7 @@ const Header: React.FC = () => {
         isBannerVisible ? "top-[36px]" : "top-0",
         isScrolled || !isHomePage
           ? "bg-background/95 backdrop-blur-md border-b border-border/50 shadow-lg"
-          : "bg-gradient-to-b from-background/90 to-transparent border-transparent"
+          : "bg-gradient-to-b from-background/90 to-transparent border-transparent",
       )}
     >
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6">
@@ -106,9 +125,9 @@ const Header: React.FC = () => {
           to="/"
           className="flex items-center space-x-2 transition-transform hover:scale-105"
         >
-          <Cigarette className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+          <Bug className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
           <span className="font-oswald font-bold text-lg sm:text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-            Alien
+            beetle
           </span>
         </Link>
 
@@ -133,7 +152,7 @@ const Header: React.FC = () => {
                   "text-sm font-medium transition-all duration-200",
                   item.isActive || location.pathname === item.path
                     ? "bg-primary/10 text-primary hover:bg-primary/20"
-                    : "hover:bg-white/5"
+                    : "hover:bg-white/5",
                 )}
               >
                 <Link to={item.path}>
@@ -168,7 +187,11 @@ const Header: React.FC = () => {
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>{layoutMode === "contained" ? "Switch to Full Width" : "Switch to Contained"}</p>
+                <p>
+                  {layoutMode === "contained"
+                    ? "Switch to Full Width"
+                    : "Switch to Contained"}
+                </p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -202,7 +225,11 @@ const Header: React.FC = () => {
                   />
                 </div>
                 <DialogFooter className="sm:justify-end">
-                  <Button type="button" variant="secondary" onClick={() => setIsDialogOpen(false)}>
+                  <Button
+                    type="button"
+                    variant="secondary"
+                    onClick={() => setIsDialogOpen(false)}
+                  >
                     Cancel
                   </Button>
                   <Button type="button" onClick={handleUpdateBanner}>
@@ -216,14 +243,22 @@ const Header: React.FC = () => {
           {!session ? (
             <>
               <Link to="/login">
-                <Button variant="ghost" className="hidden md:inline-flex">Login</Button>
+                <Button variant="ghost" className="hidden md:inline-flex">
+                  Login
+                </Button>
               </Link>
               <Link to="/register">
-                <Button variant="default" className="hidden md:inline-flex">Register</Button>
+                <Button variant="default" className="hidden md:inline-flex">
+                  Register
+                </Button>
               </Link>
             </>
           ) : (
-            <Button variant="ghost" onClick={handleLogout} className="hidden md:inline-flex">
+            <Button
+              variant="ghost"
+              onClick={handleLogout}
+              className="hidden md:inline-flex"
+            >
               <LogOut className="h-4 w-4 mr-2" /> Logout
             </Button>
           )}
@@ -246,9 +281,9 @@ const Header: React.FC = () => {
                 <div className="flex items-center justify-between mb-6 sm:mb-8">
                   <SheetClose asChild>
                     <Link to="/" className="flex items-center space-x-1">
-                      <Cigarette className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+                      <Bug className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                       <span className="font-oswald font-bold text-lg sm:text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                        Alien
+                        beetle
                       </span>
                     </Link>
                   </SheetClose>
@@ -268,7 +303,7 @@ const Header: React.FC = () => {
                           "justify-start text-sm font-medium transition-all duration-200",
                           item.isActive || location.pathname === item.path
                             ? "bg-primary/10 text-primary hover:bg-primary/20"
-                            : "hover:bg-white/5"
+                            : "hover:bg-white/5",
                         )}
                       >
                         <Link to={item.path}>
@@ -282,18 +317,32 @@ const Header: React.FC = () => {
                     <>
                       <SheetClose asChild>
                         <Link to="/login">
-                          <Button variant="ghost" className="justify-start w-full">Login</Button>
+                          <Button
+                            variant="ghost"
+                            className="justify-start w-full"
+                          >
+                            Login
+                          </Button>
                         </Link>
                       </SheetClose>
                       <SheetClose asChild>
                         <Link to="/register">
-                          <Button variant="default" className="justify-start w-full">Register</Button>
+                          <Button
+                            variant="default"
+                            className="justify-start w-full"
+                          >
+                            Register
+                          </Button>
                         </Link>
                       </SheetClose>
                     </>
                   ) : (
                     <SheetClose asChild>
-                      <Button variant="ghost" onClick={handleLogout} className="justify-start w-full">
+                      <Button
+                        variant="ghost"
+                        onClick={handleLogout}
+                        className="justify-start w-full"
+                      >
                         <LogOut className="h-4 w-4 mr-2" /> Logout
                       </Button>
                     </SheetClose>

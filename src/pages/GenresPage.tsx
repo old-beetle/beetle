@@ -14,7 +14,7 @@ import {
 import MediaCard from "@/components/MediaCard";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 const GenresPage: React.FC = () => {
   const [movieGenres, setMovieGenres] = useState<Genre[]>([]);
@@ -43,16 +43,16 @@ const GenresPage: React.FC = () => {
         if (genreId) {
           // If genreId is provided in URL, find and select that genre
           const genre = [...movieGenresData, ...tvGenresData].find(
-            (g) => g.id === parseInt(genreId)
+            (g) => g.id === parseInt(genreId),
           );
           if (genre) {
             setSelectedGenre(genre);
             // Check if the genre exists in both lists
             const isMovieGenre = movieGenresData.some(
-              (g: Genre) => g.id === genre.id
+              (g: Genre) => g.id === genre.id,
             );
             const isTvGenre = tvGenresData.some(
-              (g: Genre) => g.id === genre.id
+              (g: Genre) => g.id === genre.id,
             );
 
             // If the genre exists in both lists, maintain the current tab
@@ -92,7 +92,7 @@ const GenresPage: React.FC = () => {
             media_type: "movie",
           }));
           setMovies(
-            page === 1 ? moviesWithType : [...movies, ...moviesWithType]
+            page === 1 ? moviesWithType : [...movies, ...moviesWithType],
           );
         } else {
           data = await api.getTvShowsByGenre(selectedGenre.id, page, sortBy);
@@ -101,7 +101,7 @@ const GenresPage: React.FC = () => {
             media_type: "tv",
           }));
           setTvShows(
-            page === 1 ? showsWithType : [...tvShows, ...showsWithType]
+            page === 1 ? showsWithType : [...tvShows, ...showsWithType],
           );
         }
         setTotalPages(Math.min(data.total_pages, 10)); // Limit to 10 pages
@@ -177,21 +177,35 @@ const GenresPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Genres - Alien Streaming</title>
-        <meta name="description" content="Browse movies and TV shows by genre. Find your favorite genres and discover new content on Alien." />
-        <meta property="og:title" content="Genres - Alien Streaming" />
-        <meta property="og:description" content="Browse movies and TV shows by genre. Find your favorite genres and discover new content on Alien." />
+        <title>Genres - beetle Streaming</title>
+        <meta
+          name="description"
+          content="Browse movies and TV shows by genre. Find your favorite genres and discover new content on beetle."
+        />
+        <meta property="og:title" content="Genres - beetle Streaming" />
+        <meta
+          property="og:description"
+          content="Browse movies and TV shows by genre. Find your favorite genres and discover new content on beetle."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alienred.ddnsfree.com/genres" />
+        <meta
+          property="og:url"
+          content="https://beetlered.ddnsfree.com/genres"
+        />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Genres - Alien Streaming" />
-        <meta name="twitter:description" content="Browse movies and TV shows by genre. Find your favorite genres and discover new content on Alien." />
+        <meta name="twitter:title" content="Genres - beetle Streaming" />
+        <meta
+          name="twitter:description"
+          content="Browse movies and TV shows by genre. Find your favorite genres and discover new content on beetle."
+        />
         <meta name="twitter:image" content="/favicon.svg" />
       </Helmet>
       <div className="min-h-screen">
         <div className="px-4 sm:px-6 md:px-8 pt-24 pb-12">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Genres</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">
+            Genres
+          </h1>
 
           <Tabs
             defaultValue="movie"

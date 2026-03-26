@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Search, Loader2 } from "lucide-react";
 import MediaCard from "@/components/MediaCard";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 const SearchPage: React.FC = () => {
   const location = useLocation();
@@ -72,21 +72,35 @@ const SearchPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Search - Alien Streaming</title>
-        <meta name="description" content="Search for movies, TV shows, and people. Find your favorite content quickly on Alien." />
-        <meta property="og:title" content="Search - Alien Streaming" />
-        <meta property="og:description" content="Search for movies, TV shows, and people. Find your favorite content quickly on Alien." />
+        <title>Search - beetle Streaming</title>
+        <meta
+          name="description"
+          content="Search for movies, TV shows, and people. Find your favorite content quickly on beetle."
+        />
+        <meta property="og:title" content="Search - beetle Streaming" />
+        <meta
+          property="og:description"
+          content="Search for movies, TV shows, and people. Find your favorite content quickly on beetle."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alienred.ddnsfree.com/search" />
+        <meta
+          property="og:url"
+          content="https://beetlered.ddnsfree.com/search"
+        />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Search - Alien Streaming" />
-        <meta name="twitter:description" content="Search for movies, TV shows, and people. Find your favorite content quickly on Alien." />
+        <meta name="twitter:title" content="Search - beetle Streaming" />
+        <meta
+          name="twitter:description"
+          content="Search for movies, TV shows, and people. Find your favorite content quickly on beetle."
+        />
         <meta name="twitter:image" content="/favicon.svg" />
       </Helmet>
       <div className="min-h-screen">
         <div className="container pt-24 pb-12">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Search</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">
+            Search
+          </h1>
 
           <form onSubmit={handleSearch} className="mb-6 sm:mb-8">
             <div className="flex w-full max-w-2xl items-center space-x-2">
@@ -150,7 +164,9 @@ const SearchPage: React.FC = () => {
                               )}
                             </div>
                             <div className="mt-2">
-                              <h3 className="font-medium text-sm">{item.name}</h3>
+                              <h3 className="font-medium text-sm">
+                                {item.name}
+                              </h3>
                               <p className="text-xs text-muted-foreground">
                                 {item.known_for_department}
                               </p>
@@ -166,8 +182,8 @@ const SearchPage: React.FC = () => {
                           "release_date" in item
                             ? item.release_date?.substring(0, 4)
                             : "first_air_date" in item
-                            ? item.first_air_date?.substring(0, 4)
-                            : "";
+                              ? item.first_air_date?.substring(0, 4)
+                              : "";
 
                         return (
                           <MediaCard
@@ -175,10 +191,14 @@ const SearchPage: React.FC = () => {
                             id={item.id}
                             title={title || "Unknown"}
                             posterPath={
-                              "poster_path" in item ? item.poster_path : undefined
+                              "poster_path" in item
+                                ? item.poster_path
+                                : undefined
                             }
                             rating={
-                              "vote_average" in item ? item.vote_average || 0 : 0
+                              "vote_average" in item
+                                ? item.vote_average || 0
+                                : 0
                             }
                             mediaType={mediaType as "movie" | "tv"}
                             year={year}

@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 const TermsPage: React.FC = () => {
   const navigate = useNavigate();
@@ -10,16 +10,34 @@ const TermsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Terms of Service - Alien Streaming</title>
-        <meta name="description" content="Read the terms of service for Alien. Understand the rules and guidelines for using this site." />
-        <meta property="og:title" content="Terms of Service - Alien Streaming" />
-        <meta property="og:description" content="Read the terms of service for Alien. Understand the rules and guidelines for using this site." />
+        <title>Terms of Service - beetle Streaming</title>
+        <meta
+          name="description"
+          content="Read the terms of service for beetle. Understand the rules and guidelines for using this site."
+        />
+        <meta
+          property="og:title"
+          content="Terms of Service - beetle Streaming"
+        />
+        <meta
+          property="og:description"
+          content="Read the terms of service for beetle. Understand the rules and guidelines for using this site."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alienred.ddnsfree.com/terms" />
+        <meta
+          property="og:url"
+          content="https://beetlered.ddnsfree.com/terms"
+        />
         <meta property="og:image" content="/favicon.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Terms of Service - Alien Streaming" />
-        <meta name="twitter:description" content="Read the terms of service for Alien. Understand the rules and guidelines for using this site." />
+        <meta
+          name="twitter:title"
+          content="Terms of Service - beetle Streaming"
+        />
+        <meta
+          name="twitter:description"
+          content="Read the terms of service for beetle. Understand the rules and guidelines for using this site."
+        />
         <meta name="twitter:image" content="/favicon.svg" />
       </Helmet>
       <div className="container px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
@@ -57,9 +75,9 @@ const TermsPage: React.FC = () => {
               </h2>
               <p>
                 By accessing and using this website, you agree to be bound by
-                these Terms of Service and all applicable laws and regulations. If
-                you do not agree with any of these terms, you are prohibited from
-                using or accessing this site.
+                these Terms of Service and all applicable laws and regulations.
+                If you do not agree with any of these terms, you are prohibited
+                from using or accessing this site.
               </p>
             </section>
 
@@ -68,15 +86,15 @@ const TermsPage: React.FC = () => {
                 2. Educational Use Only
               </h2>
               <p>
-                This website is provided as an educational demonstration project.
-                All materials and content are for learning and demonstration
-                purposes only. Under this license you may not:
+                This website is provided as an educational demonstration
+                project. All materials and content are for learning and
+                demonstration purposes only. Under this license you may not:
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>Use the materials for any commercial purpose</li>
                 <li>
-                  Attempt to decompile or reverse engineer any software contained
-                  on the website
+                  Attempt to decompile or reverse engineer any software
+                  contained on the website
                 </li>
                 <li>
                   Remove any copyright or other proprietary notations from the
@@ -107,11 +125,11 @@ const TermsPage: React.FC = () => {
                 4. Third-Party Content
               </h2>
               <p>
-                Any third-party content or links displayed on this website are for
-                educational purposes only. We do not endorse or claim ownership of
-                any third-party content. Users are responsible for ensuring they
-                comply with all applicable laws and regulations when accessing
-                third-party content.
+                Any third-party content or links displayed on this website are
+                for educational purposes only. We do not endorse or claim
+                ownership of any third-party content. Users are responsible for
+                ensuring they comply with all applicable laws and regulations
+                when accessing third-party content.
               </p>
             </section>
 
