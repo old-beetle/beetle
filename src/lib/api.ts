@@ -1,19 +1,26 @@
 import axios from "axios";
 
 // TMDb API configuration
-const TMDB_API_KEY = import.meta.env.VITE_TMDB_API_KEY;
-const TMDB_BASE_URL = "https://api.themoviedb.org/3";
 const TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p";
 
 // VidSrc API (free streaming API)
 const VIDSRC_BASE_URL = "https://vidsrc.xyz/embed";
 
-// Create an axios instance for TMDb API
+// Create an axios instance for TMDb API (Proxying through Vercel serverless function)
 const tmdbApi = axios.create({
-  baseURL: TMDB_BASE_URL,
-  params: {
-    api_key: TMDB_API_KEY,
-  },
+  baseURL: "/api/tmdb",
+});
+
+// Interceptor to transform path into a query parameter for the proxy
+tmdbApi.interceptors.request.use((config) => {
+  if (config.url) {
+    config.params = {
+      ...config.params,
+      path: config.url,
+    };
+    config.url = ""; // Clear url since we're using baseURL as the full proxy endpoint
+  }
+  return config;
 });
 
 // Add response interceptor for error handling
@@ -25,7 +32,7 @@ tmdbApi.interceptors.response.use(
     } else {
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 // API functions
@@ -35,7 +42,7 @@ export const api = {
     try {
       const response = await tmdbApi.get(
         `/trending/${mediaType}/${timeWindow}`,
-        { params: { page } }
+        { params: { page } },
       );
       return response.data;
     } catch (error) {
@@ -118,7 +125,7 @@ export const api = {
     mediaType: "movie" | "tv",
     id: string,
     season?: number,
-    episode?: number
+    episode?: number,
   ) => {
     if (mediaType === "movie") {
       return `${VIDSRC_BASE_URL}/movie?tmdb=${id}`;
@@ -151,7 +158,7 @@ export const api = {
   getMoviesByGenre: async (
     genreId: number,
     page = 1,
-    sortBy = "popularity.desc"
+    sortBy = "popularity.desc",
   ) => {
     try {
       const response = await tmdbApi.get("/discover/movie", {
@@ -167,7 +174,7 @@ export const api = {
   getTvShowsByGenre: async (
     genreId: number,
     page = 1,
-    sortBy = "popularity.desc"
+    sortBy = "popularity.desc",
   ) => {
     try {
       const response = await tmdbApi.get("/discover/tv", {
@@ -183,7 +190,7 @@ export const api = {
 // Helper functions for image URLs
 export const getImageUrl = (
   path: string | null | undefined,
-  size: string = "original"
+  size: string = "original",
 ) => {
   if (!path) return null;
   return `${TMDB_IMAGE_BASE_URL}/${size}${path}`;
@@ -191,21 +198,28 @@ export const getImageUrl = (
 
 export const getPosterUrl = (
   path: string | null | undefined,
-  size: "w92" | "w154" | "w185" | "w342" | "w500" | "w780" | "original" = "w500"
+  size:
+    | "w92"
+    | "w154"
+    | "w185"
+    | "w342"
+    | "w500"
+    | "w780"
+    | "original" = "w500",
 ) => {
   return getImageUrl(path, size);
 };
 
 export const getBackdropUrl = (
   path: string | null | undefined,
-  size: "w300" | "w780" | "w1280" | "original" = "w1280"
+  size: "w300" | "w780" | "w1280" | "original" = "w1280",
 ) => {
   return getImageUrl(path, size);
 };
 
 export const getProfileUrl = (
   path: string | null | undefined,
-  size: "w45" | "w185" | "h632" | "original" = "w185"
+  size: "w45" | "w185" | "h632" | "original" = "w185",
 ) => {
   return getImageUrl(path, size);
 };
